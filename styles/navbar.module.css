@@ -59,13 +59,19 @@
   
    }
 /*End of toggle*/
-.cardImage {
+.imageItem {
     transition: transform 0.3s ease-in-out;
+    margin: auto;
+    padding: 10px;
+    display: inline-flexbox;
+    width: 20%;
+  
+    image-resolution:inherit;
+
   }
   
-  .cardImage:hover {
+  .imageItem:hover {
     transform: scale(0.9);
   }
   
-
   
