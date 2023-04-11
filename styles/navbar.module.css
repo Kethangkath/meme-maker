@@ -61,11 +61,10 @@
 /*End of toggle*/
 .imageItem {
     transition: transform 0.3s ease-in-out;
-    margin: auto;
+    margin: auto; 
     padding: 10px;
     display: inline-flexbox;
-    width: 20%;
-  
+    width: 20%;  
     image-resolution:inherit;
 
   }
@@ -80,7 +79,6 @@
 
 .inputElement{
   margin-left: 5px;
-  border: 1px solid rgb(87, 87, 87);
   font-family:Georgia, 'Times New Roman', Times, serif;
 }
 .inputElement:active{

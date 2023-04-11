@@ -19,19 +19,21 @@ function MyComponent() {
   };
   return (
     <>
-      <button onClick={() => handleImageClick('/images/sample0.jpg')} className={'styles.imageItem m-2 mt-2 border-0'}>
+    <div className="container flex-row">
+      
+      <button onClick={() => handleImageClick('/images/sample0.jpg')} className={`${styles.imageItem} m-2 mt-2 border-0`}>
         <img src="/images/sample0.jpg" alt="Image 1" width="200" height="200" />
       </button>
 
-      <button onClick={() => handleImageClick('/images/sample1.jpg')} className='m-2 mt-2  border-0'>
+      <button onClick={() => handleImageClick('/images/sample1.jpg')} className={`${styles.imageItem} m-2 mt-2 border-0`}>
         <img src="/images/sample1.jpg" alt="Image 2" width="200" height="200" />
       </button>
 
-      <button onClick={() => handleImageClick('/images/sample2.jpg')} className='m-2 mt-2  border-0'>
+      <button onClick={() => handleImageClick('/images/sample2.jpg')} className={`${styles.imageItem} m-2 mt-2 border-0`}>
         <img src="/images/sample2.jpg" alt="Image 3" width="200" height="200" />
       </button>
 
-      <button onClick={() => handleImageClick('/images/sample3.jpg')} className='m-2 mt-2  border-0'>
+      <button onClick={() => handleImageClick('/images/sample3.jpg')} className={`${styles.imageItem} m-2 mt-2 border-0`}>
         <img src="/images/sample3.jpg" alt="Image 4" width="200" height="200" />
       </button>
 
@@ -61,6 +63,8 @@ function MyComponent() {
         </Offcanvas.Body>
       </Offcanvas>
       <Footer />
+      </div>
+   
     </>
   );
 }
