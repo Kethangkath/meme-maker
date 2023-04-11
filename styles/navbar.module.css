@@ -74,4 +74,15 @@
     transform: scale(0.9);
   }
   
-  
+.offkanvass{
+  margin-bottom: 10px;
+}
+
+.inputElement{
+  margin-left: 5px;
+  border: 1px solid rgb(87, 87, 87);
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.inputElement:active{
+  border: none;
+}
