@@ -13,8 +13,8 @@ function PrimaryNavbar() {
 
 function SecondaryNavbar() {
   return (
-    <div className={styles.secondnav}>
-      <Navbar bg="light" expand="sm" className="mt-0" >
+    <div  className={'`${styles.secondnav}` mb-2'}>    
+         <Navbar bg="light" expand="sm" className="mt-0" >
         <Navbar.Toggle className="ms-auto" />
         <Navbar.Collapse id="secondary-navbar-nav">
           <Nav className="mx-auto">

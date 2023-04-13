@@ -1,8 +1,12 @@
 import React from 'react'
+import Head from 'next/head'
 
 const upload = () => {
   return (
     <>
+   <Head>
+   <title>Upload</title>
+   </Head>
     <form method="post" encType='mulitpart/form-data'>
         <div className="mx-auto justify">
         <label htmlFor="file" className="mt-2 mb-2">File</label><br />

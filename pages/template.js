@@ -2,6 +2,7 @@ import Footer from '@/components/footer';
 import { useState } from 'react';
 import { Offcanvas } from 'react-bootstrap';
 import styles from '@/styles/navbar.module.css'
+import Head from 'next/head';
 
 function MyComponent() {
   const [show, setShow] = useState(false);
@@ -19,25 +20,19 @@ function MyComponent() {
   };
   return (
     <>
-    <div className="container flex-row">
-      
-      <button onClick={() => handleImageClick('/images/sample0.jpg')} className={`${styles.imageItem} m-2 mt-2 border-0`}>
-        <img src="/images/sample0.jpg" alt="Image 1" width="200" height="200" />
-      </button>
-
-      <button onClick={() => handleImageClick('/images/sample1.jpg')} className={`${styles.imageItem} m-2 mt-2 border-0`}>
-        <img src="/images/sample1.jpg" alt="Image 2" width="200" height="200" />
-      </button>
-
-      <button onClick={() => handleImageClick('/images/sample2.jpg')} className={`${styles.imageItem} m-2 mt-2 border-0`}>
-        <img src="/images/sample2.jpg" alt="Image 3" width="200" height="200" />
-      </button>
-
-      <button onClick={() => handleImageClick('/images/sample3.jpg')} className={`${styles.imageItem} m-2 mt-2 border-0`}>
-        <img src="/images/sample3.jpg" alt="Image 4" width="200" height="200" />
-      </button>
-
-
+    <Head>
+    <title>Templates</title>
+    </Head>
+      <div className={styles.imgGallery}>
+        <img src="/images/sample1.jpg" alt="template 1" onClick={() => handleImageClick('/images/sample0.jpg')}/>
+        <img src="/images/sample1.jpg" alt="template 1" onClick={() => handleImageClick('/images/sample0.jpg')}/>
+        <img src="/images/sample2.jpg" alt="template 2" onClick={() => handleImageClick('/images/sample1.jpg')}/>
+        <img src="/images/sample2.jpg" alt="template 2" onClick={() => handleImageClick('/images/sample1.jpg')}/>
+        <img src="/images/sample3.jpg" alt="template 3" onClick={() => handleImageClick('/images/sample3.jpg')}/>
+        <img src="/images/sample3.jpg" alt="template 3" onClick={() => handleImageClick('/images/sample3.jpg')}/>
+        <img src="/images/sample3.jpg" alt="template 3" onClick={() => handleImageClick('/images/sample3.jpg')}/>
+        <img src="/images/sample3.jpg" alt="template 3" onClick={() => handleImageClick('/images/sample3.jpg')}/>
+      </div>
       <Offcanvas show={show} onHide={() => setShow(false)}>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Image 1</Offcanvas.Title>
@@ -45,7 +40,7 @@ function MyComponent() {
         <Offcanvas.Body>
           <img src={selectedImageSrc} alt="Selected Image" width="300" height="300" className='p-2 m-4 mt-1 mb-2' />
           <div>
-            <form action="" method="GET">
+            <form action="/api/download" method="GET">
               <div className={styles.offkanvass}>
                 <fieldset className='mb-2'>
                   <label htmlFor="">Text 1: </label>
@@ -63,7 +58,7 @@ function MyComponent() {
         </Offcanvas.Body>
       </Offcanvas>
       <Footer />
-      </div>
+  
    
     </>
   );

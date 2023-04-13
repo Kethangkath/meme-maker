@@ -1,10 +1,23 @@
 const express = require('express');
-const app = express();
+const next = require('next');
+const dev = process.env.NODE_ENV !== 'production'
+const app = next({ dev })
 
-// Define your Express routes and middleware here
+const handle = app.getRequestHandler()
 
-// Start the Express server
-const port = process.env.PORT || 3000; // Use the environment port or default to 3000
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+app.prepare().then(()=>{
+  const server = express()
+  
+  server.get('*',(req,res)=>{
+    return handle(req,res)
+  })
+  server.listen(3000,(err)=>{
+    if(err) throw err
+    console.log("Server ready!")
+  })
+})
+.catch((ex)=>{
+  console.error(ex.stack)
+  process.exit(1)
+})
+
