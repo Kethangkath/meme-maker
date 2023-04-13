@@ -22,11 +22,7 @@ function SecondaryNavbar() {
             <Nav.Item>
             <Link className={styles.navlinks} href='/'><li className={styles.linkTags}>Home</li></Link>  
             </Nav.Item>
-
-            <Nav.Item>
-            <Link className={styles.navlinks} href='/upload'><li className={styles.linkTags}>Upload</li></Link> 
-            </Nav.Item>
-
+            
             <Nav.Item>
             <Link className={styles.navlinks} href='/template'><li className={styles.linkTags}>Templates</li></Link> 
             </Nav.Item>

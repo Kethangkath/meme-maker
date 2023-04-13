@@ -24,14 +24,15 @@ function MyComponent() {
     <title>Templates</title>
     </Head>
       <div className={styles.imgGallery}>
-        <img src="/images/sample1.jpg" alt="template 1" onClick={() => handleImageClick('/images/sample0.jpg')}/>
-        <img src="/images/sample1.jpg" alt="template 1" onClick={() => handleImageClick('/images/sample0.jpg')}/>
-        <img src="/images/sample2.jpg" alt="template 2" onClick={() => handleImageClick('/images/sample1.jpg')}/>
-        <img src="/images/sample2.jpg" alt="template 2" onClick={() => handleImageClick('/images/sample1.jpg')}/>
-        <img src="/images/sample3.jpg" alt="template 3" onClick={() => handleImageClick('/images/sample3.jpg')}/>
-        <img src="/images/sample3.jpg" alt="template 3" onClick={() => handleImageClick('/images/sample3.jpg')}/>
-        <img src="/images/sample3.jpg" alt="template 3" onClick={() => handleImageClick('/images/sample3.jpg')}/>
-        <img src="/images/sample3.jpg" alt="template 3" onClick={() => handleImageClick('/images/sample3.jpg')}/>
+        <img onClick={() => handleImageClick('/images/sample0.jpg')} src="/images/sample1.jpg" alt="template 1" />
+        <img onClick={() => handleImageClick('/images/sample0.jpg')} src="/images/sample1.jpg" alt="template 1" />
+        <img onClick={() => handleImageClick('/images/sample1.jpg')} src="/images/sample2.jpg" alt="template 2" />
+        <img onClick={() => handleImageClick('/images/sample1.jpg')} src="/images/sample2.jpg" alt="template 2" />
+        <img onClick={() => handleImageClick('/images/sample3.jpg')} src="/images/sample3.jpg" alt="template 3" />
+        <img onClick={() => handleImageClick('/images/sample3.jpg')} src="/images/sample3.jpg" alt="template 3" />
+        <img onClick={() => handleImageClick('/images/sample3.jpg')} src="/images/sample3.jpg" alt="template 3" />
+        <img onClick={() => handleImageClick('/images/sample3.jpg')} src="/images/sample3.jpg" alt="template 3" />
+
       </div>
       <Offcanvas show={show} onHide={() => setShow(false)}>
         <Offcanvas.Header closeButton>

@@ -20,6 +20,10 @@ export default function Home({ imagesData }) {
   //Handle the ready state and display the result contained in the data object mapped to the structure of the json file
   return (
     <>
+{/* 
+aspect-ratio: 3/2;
+  object-fit: contain;
+  mix-blend-mode: color-burn; */}
    
       <Head>
         <title>Meme-Maker</title>
@@ -28,10 +32,9 @@ export default function Home({ imagesData }) {
       </Head>
       
      <main>
-      <div className='d-inline-grid'>
+     <div className={styles.imgGallery}>
           {imagesData.map(image => (
             <div key={image.id} className={styles.imageContainer} >
-              {/* div  className={'`${styles.secondnav}` mb-2'}  style={{display:'block',position:'relative'}}*/}
               <img
                 src={image.src}
                 alt={`Image ${image.id}`} className={styles.ImgFluidCustom}                                      
